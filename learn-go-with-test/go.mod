@@ -1,3 +1,3 @@
-module github.com/ardinusawan/learn-go-with-test
+module github.com/ardinusawan/my-learning/learn-go-with-test
 
 go 1.15
