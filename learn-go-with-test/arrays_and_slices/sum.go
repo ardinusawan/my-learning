@@ -23,3 +23,5 @@ func SumAllTails(numbersToSum ...[]int) []int {
 
 	return sums
 }
+
+// TODO: https://quii.gitbook.io/learn-go-with-tests/go-fundamentals/arrays-and-slices#wrapping-up
