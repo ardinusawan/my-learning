@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 )
 
@@ -32,6 +33,11 @@ func (w *Wallet) Balance() Bitcoin {
 }
 
 // Withdraw take amount to decrase wallet
-func (w *Wallet) Withdraw(amount Bitcoin) {
+func (w *Wallet) Withdraw(amount Bitcoin) error {
+	if amount > w.Balance() {
+		return errors.New("oh no")
+	}
+
 	w.balance -= amount
+	return nil
 }
