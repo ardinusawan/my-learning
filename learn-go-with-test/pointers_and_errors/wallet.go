@@ -4,13 +4,17 @@ import (
 	"fmt"
 )
 
+// Bitcoin is int type data
+type Bitcoin int
+
 // Stringer will override print methods of object
 type Stringer interface {
 	String() string
 }
 
-// Bitcoin is int type data
-type Bitcoin int
+func (b Bitcoin) String() string {
+	return fmt.Sprintf("%d BTC", b)
+}
 
 // Wallet type data
 type Wallet struct {
@@ -27,6 +31,7 @@ func (w *Wallet) Balance() Bitcoin {
 	return w.balance
 }
 
-func (b Bitcoin) String() string {
-	return fmt.Sprintf("%d BTC", b)
+// Withdraw take amount to decrase wallet
+func (w *Wallet) Withdraw(amount Bitcoin) {
+	w.balance -= amount
 }
