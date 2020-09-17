@@ -46,7 +46,7 @@ func assertNoError(t *testing.T, got error) {
 func assertError(t *testing.T, got error, want error) {
 	t.Helper()
 	if got == nil {
-		t.Errorf("wanted an error but didn't get one")
+		t.Fatal("wanted an error but didn't get one")
 	}
 
 	if got != want {
