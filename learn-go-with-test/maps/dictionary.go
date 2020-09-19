@@ -6,8 +6,10 @@ import (
 
 type Dictionary map[string]string
 
-var ErrorNotFound = errors.New("could not find the word you were looking for")
-var ErrWordExist = errors.New("word already exist")
+var (
+	ErrorNotFound = errors.New("could not find the word you were looking for")
+	ErrWordExist  = errors.New("word already exist")
+)
 
 func (d Dictionary) Search(word string) (string, error) {
 	definition, ok := d[word]
