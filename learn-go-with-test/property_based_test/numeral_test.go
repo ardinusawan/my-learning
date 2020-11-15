@@ -30,6 +30,11 @@ func TestRomanNumerals(t *testing.T) {
 			4,
 			"IV",
 		},
+		{
+			"5 gets converted to V",
+			5,
+			"V",
+		},
 	}
 
 	for _, test := range cases {
