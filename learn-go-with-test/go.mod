@@ -4,5 +4,5 @@ go 1.15
 
 require (
 	github.com/kisielk/errcheck v1.4.0 // indirect
-	golang.org/x/tools v0.0.0-20200916225323-c537a342ddf6 // indirect
+	github.com/quii/learn-go-with-tests v0.0.0-20201224121442-f35fdae194d1
 )
