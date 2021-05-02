@@ -148,6 +148,13 @@ func assertLeague(t testing.TB, got, want []Player) {
 	}
 }
 
+func assertScoreEquals(t testing.TB, got, want int) {
+	t.Helper()
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("got %v want %v", got, want)
+	}
+}
+
 func newPostWinRequest(name string) *http.Request {
 	req, _ := http.NewRequest(http.MethodPost, fmt.Sprintf("/players/%s", name), nil)
 	return req
